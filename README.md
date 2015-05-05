@@ -3,10 +3,6 @@ Void-Finder
 **by: Sebastian Bustamante**
 **sebastian.bustamante@udea.edu.co**
 
-**(cumulative version)**
-*This branch makes all void identification up to some nth-order median filtering with and without boundary removal, 
-passing through all middle orders.*
-
 This code is intended to identidy bulk voids in cosmological simulations. To do so, three different schemes are 
 developed and explored here, all of them based upon the watershed transform procedure. The first two schemes are
 based on the fractional anisotropy field of two tensorial methods for classifying the cosmic web, the T-web and
