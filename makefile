@@ -3,8 +3,13 @@
 #==============================================================================
 # Sebastian Bustamante (Universidad de Antioquia), sebastian.bustamante@gmail.com
 
-CC=gcc
-CFLAGS=-g -I. -c
+
+#Calculating density field from trace of eigenvalues (Tweb method)
+OPT += -DDENSITY_TRACE
+
+
+CC	=	gcc
+CFLAGS	=	-g -I. -c $(OPT)
 
 #Void Finder - Program
 Void_Finder:inout.o finder.o tools.o void_finder.o

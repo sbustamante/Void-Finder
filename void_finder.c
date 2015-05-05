@@ -42,11 +42,10 @@ int main( int argc, char *argv[] )
     sprintf( delta_filename, "%s", argv[2] );
     p[NBOX] = read_bin64( delta_filename, &delta );
     
-    
-//Density Field!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-for( n=0; n<p[NBOX]*p[NBOX]*p[NBOX]; n++ )
-    delta[n] = (double)(eigen1[n] + eigen2[n] + eigen3[n]);
-    
+    #ifdef DENSITY_TRACE
+    for( n=0; n<p[NBOX]*p[NBOX]*p[NBOX]; n++ )
+	delta[n] = (double)(eigen1[n] + eigen2[n] + eigen3[n]);
+    #endif
     
     //Fractional anisotropy index
     //Allocating memory of FA
